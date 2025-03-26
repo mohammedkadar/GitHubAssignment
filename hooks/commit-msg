@@ -1,0 +1,6 @@
+#!/bin/bash
+MESSAGE=$(cat $1)
+if [[ ! "$MESSAGE" =~ ^(feat|fix|docs|style|refactor|test|chore): ]]; then
+    echo "Error: Commit message should start with feat|fix|docs|style|refactor|test|chore:"
+    exit 1
+fi
